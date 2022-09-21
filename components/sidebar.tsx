@@ -60,7 +60,7 @@ const Sidebar = () => {
          color="gray"
       >
       {/* inner box for content */}
-      <Box paddingY="20px" height="100%">
+      <Box paddingY="20px" height="80%">
          {/* box for image */}
          <Box width="120px" marginBottom="20px" paddingX="20px">
             <NextImage src="/logo.svg" height={60} width={120}/>
@@ -90,7 +90,7 @@ const Sidebar = () => {
             </List>
          </Box>
          <Divider color="gray.800"/>
-         <Box spacing={2} marginTop="20px">
+         <Box marginTop="20px">
             <List spacing={2} >
                   {musicMenu.map((menu) => (
                      <ListItem 
