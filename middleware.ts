@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 //middleware will run on every single route signin or signup
 const signedinPages = ['/','/playlist','/library'];
-console.log("signed in",signedinPages);
 //not a frontend component like home or not seed file,but it is in a web worker environment
 export default function middleware(req: NextRequest) {
    console.log("*********middleware called*************")
@@ -11,6 +10,7 @@ export default function middleware(req: NextRequest) {
       //    return NextResponse.redirect('/signin')
       // }
       const token = req.cookies.get("SPOTIFY_ACCESS_TOKEN");
+      console.log("token is",token);
       if(!token) {
          const url = req.nextUrl.clone();
          url.pathname = "/signin";

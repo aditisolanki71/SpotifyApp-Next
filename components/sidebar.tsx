@@ -18,6 +18,7 @@ import {
    MdFavorite,
    //RiSpotifyLine
  } from "react-icons/md"
+ import { usePlaylist } from "../lib/hooks"
  const navMenu = [
     {
        name: "Home",
@@ -48,8 +49,9 @@ import {
       route: "/favorite"
    }
  ]
- const playLists = new Array(30).fill(1).map((_, i) => `Playlist ${i+1}`)
 const Sidebar = () => {
+   const { playlists } = usePlaylist();
+   console.log("playlists",playlists);
   return (
      //main outer box for layout
       <Box 
@@ -117,16 +119,16 @@ const Sidebar = () => {
          <Divider color="gray.800"/>
          <Box height="66%" overflowY="auto" paddingY="20px">
             <List spacing={2}>
-               {playLists.map((playlist) => (
+               {playlists.map((playlist) => (
                    <ListItem 
                    paddingX="20px" 
                    fontSize="16px" 
-                   key={playlist}
+                   key={playlist.id}
                 >
                    <LinkBox>
                       <NextLink href="/" passHref>
                          <LinkOverlay>
-                           {playlist}
+                           {playlist.name}
                          </LinkOverlay>
                       </NextLink>
                    </LinkBox>
