@@ -14,7 +14,7 @@ const Home = ({artists}) => {
         title={`${user?.firstName} ${user?.lastName}`}
         subtitle="Profile"
         image="/images/profile/aditi.jpg"
-        description={`${user.playlistsCount} Public Playlist`}
+        description={`${user?.playlistsCount} Public Playlist`}
       >
         <Box color="white" paddingX="40px">
           <Box marginBottom="20px">
