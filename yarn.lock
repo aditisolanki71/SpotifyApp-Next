@@ -2217,6 +2217,11 @@
   dependencies:
     "tslib" "^2.0.3"
 
+"format-duration@^2.0.0":
+  "integrity" "sha512-ARqJ9qXm71pw3SGAY7bibf8lRLvltOXLjWjzzR3UrUjHu1zdeYpA/Z+u+ltdhrfRa440OjEsHNzdmuZViqqQWQ=="
+  "resolved" "https://registry.npmjs.org/format-duration/-/format-duration-2.0.0.tgz"
+  "version" "2.0.0"
+
 "framer-motion@^7.3.5", "framer-motion@>=4.0.0":
   "integrity" "sha512-JrLLVCi59LMI3+ZvSSbxf/Z7SOIdYRZrgdkUvJkzyT2RXu34HtGy26n41jNrcD5K85boqlZhGTbfqnAIfMHRLQ=="
   "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-7.3.5.tgz"
